@@ -14,3 +14,10 @@ tmp/
 
 # build output
 air
+
+# Ignore generated templ files
+*_templ.go
+
+tailwindcss
+
+build

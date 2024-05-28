@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-shape-divider-bottom-1716888327 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100svw;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotateX(180deg);
+}
+
+.custom-shape-divider-bottom-1716888327 svg {
+  position: relative;
+  display: block;
+  width: 2000px;
+}
+
+.custom-shape-divider-bottom-1716888327 .shape-fill {
+  fill: #ffffff82;
+}
+
+/* Customize website's scrollbar like Mac OS
+Not supports in Firefox and IE */
+
+/* total width */
+.scrollbar::-webkit-scrollbar {
+  background-color: #fff;
+  width: 16px;
+}
+
+/* background of the scrollbar except button or resizer */
+.scrollbar::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+.scrollbar::-webkit-scrollbar-track:hover {
+  background-color: #f4f4f4;
+}
+
+/* scrollbar itself */
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #babac0;
+  border-radius: 16px;
+  border: 5px solid #fff;
+}
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #a0a0a5;
+  border: 4px solid #f4f4f4;
+}
+
+/* set button(top and bottom of the scrollbar) */
+.scrollbar::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* div box */
+body {
+  background-color: #babac0;
+}
+.scrollbar {
+  height: 75vh;
+  width: 25vw;
+  min-width: 150px;
+  background: #fff;
+  overflow-y: scroll;
+}
+.overflow {
+  min-height: 100vh;
+}
