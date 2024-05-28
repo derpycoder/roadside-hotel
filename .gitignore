@@ -19,5 +19,4 @@ air
 *_templ.go
 
 tailwindcss
-
-build
+.DS_Store
