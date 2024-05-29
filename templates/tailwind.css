@@ -8,6 +8,30 @@
   }
 }
 
+html .ball {
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+  --tw-translate-x: 0px;
+  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+html.dark .ball {
+  --tw-translate-x: 1.5rem;
+  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+    rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+    scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 /* Fonts start*/
 .lobster-two-regular {
   font-family: "Lobster Two", sans-serif;
@@ -154,3 +178,83 @@ body {
 .overflow {
   min-height: 100vh;
 }
+
+/* Animations */
+
+@keyframes motion {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translate(-15px, -15px);
+  }
+
+  50% {
+    transform: translate(-8px, -8px);
+  }
+
+  75% {
+    transform: translate(-15px, 8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+.animate-motion {
+  animation: motion 7s infinite !important;
+}
+
+@keyframes dz {
+  0% {
+    transform: translate(0);
+  }
+
+  25% {
+    transform: translate(-15px);
+  }
+
+  50% {
+    transform: translate(-8px);
+  }
+
+  75% {
+    transform: translate(-15px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+.animate-dz {
+  animation: dz 7s infinite !important;
+}
+
+@keyframes move {
+  0% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-25px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  75% {
+    transform: translateY(-25px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+.animate-move {
+  animation: move 7s infinite !important;
+}
+
+/* Animations */
