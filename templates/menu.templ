@@ -21,7 +21,7 @@ templ sub_menu(dishes []Dish) {
 
 templ Menu(name string) {
 	<!DOCTYPE html>
-	<html lang="en">
+	<html lang="en" class="touch-pan-y">
 		<head>
 			<meta charset="UTF-8"/>
 			<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width"/>
@@ -35,8 +35,28 @@ templ Menu(name string) {
 			<meta property="og:title" content="The Roadside Hotel"/>
 			<meta property="og:image" sizes="1280x640" content="screenshot.png"/>
 			<meta property="og:description" content="The Roadside Hotel is where you get cuisine your heart desires. From local delicacies to continental cuisines."/>
+			<link rel="preconnect" href="https://fonts.googleapis.com"/>
+			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+			<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"/>
 		</head>
-		<body class="bg-[#fdefbd] prose prose-sm prose-amber select-none touch-manipulation">
+		<body class="bg-[#fdefbd] prose prose-sm prose-amber select-none">
+			<!-- Switcher -->
+			<div class="fixed top-[30%] -right-2 z-50">
+				<span class="relative inline-block rotate-90">
+					<input type="checkbox" class="checkbox opacity-0 absolute" id="chk"/>
+					<label class="label bg-orange-900 dark:bg-white shadow dark:shadow-orange-800 cursor-pointer rounded-full flex justify-between items-center p-1 w-14 h-8" for="chk">
+						<span>🌙</span>
+						<span>🌞</span>
+						<span class="ball bg-white dark:bg-orange-900 rounded-full absolute top-[2px] left-[2px] w-7 h-7"></span>
+					</label>
+				</span>
+			</div>
+			<!-- Switcher -->
+			<!-- Back to top -->
+			<a href="#" id="back-to-top" class="back-to-top fixed text-lg rounded-full bottom-5 right-1 h-9 w-9 text-center bg-orange-800 text-white leading-9 no-underline font-bold z-50">
+				↑
+			</a>
+			<!-- Back to top -->
 			<div class="min-h-full">
 				<div class="pb-32 bg-gradient-to-b from-amber-800 via-orange-400 to-yellow-400 fixed w-svw top-0 z-10">
 					<nav class="">
@@ -57,7 +77,7 @@ templ Menu(name string) {
 							</svg>
 						</div>
 						<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-							<h1 class="uppercase flex-col font-bold bg-gradient-to-b bg-clip-text text-transparent from-red-900 via-50% via-orange-800 to-amber-600">
+							<h1 class="flex-col font-bold bg-gradient-to-b bg-clip-text text-transparent from-red-900 via-50% via-orange-800 to-amber-600 font-lobster">
 								<div class="text-7xl">The</div>
 								<div class="text-7xl">Roadside</div>
 								<div class="text-4xl">Hotel</div>
@@ -71,7 +91,7 @@ templ Menu(name string) {
 							<!-- Your content -->
 							<article class="text-amber-800 font-medium">
 								<div>
-									<h2 class="uppercase text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Soup</h2>
+									<h2 class="font-lobster text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Soup</h2>
 									@sub_menu([]Dish{
 										{name: "Veg Soup", price: 20},
 										{name: "Paneer Soup", price: 30},
@@ -81,7 +101,7 @@ templ Menu(name string) {
 									})
 								</div>
 								<div>
-									<h2 class="uppercase text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Noodles</h2>
+									<h2 class="font-lobster text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Noodles</h2>
 									@sub_menu([]Dish{
 										{name: "Veg Noodles", price: 30},
 										{name: "Paneer Noodles", price: 40},
@@ -92,7 +112,7 @@ templ Menu(name string) {
 									})
 								</div>
 								<div>
-									<h2 class="uppercase text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Manchurian &amp; Rolls</h2>
+									<h2 class="font-lobster text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Manchurian &amp; Rolls</h2>
 									@sub_menu([]Dish{
 										{name: "Veg Roll", price: 30},
 										{name: "Paneer Roll", price: 40},
@@ -104,7 +124,7 @@ templ Menu(name string) {
 									})
 								</div>
 								<div>
-									<h2 class="uppercase text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Main Course</h2>
+									<h2 class="font-lobster text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Main Course</h2>
 									@sub_menu([]Dish{
 										{name: "Dal Fry", price: 40},
 										{name: "Dal Makhani", price: 50},
@@ -125,7 +145,7 @@ templ Menu(name string) {
 									})
 								</div>
 								<div>
-									<h2 class="uppercase text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Rice</h2>
+									<h2 class="font-lobster text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Rice</h2>
 									@sub_menu([]Dish{
 										{name: "Steam Rice", price: 20},
 										{name: "Jeera Rice", price: 50},
@@ -139,7 +159,7 @@ templ Menu(name string) {
 									})
 								</div>
 								<div>
-									<h2 class="uppercase text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Chicken</h2>
+									<h2 class="font-lobster text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Chicken</h2>
 									@sub_menu([]Dish{
 										{name: "Chicken Curry", price: 80},
 										{name: "Chicken Kassa", price: 80},
@@ -153,7 +173,7 @@ templ Menu(name string) {
 									})
 								</div>
 								<div>
-									<h2 class="uppercase text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Mutton</h2>
+									<h2 class="font-lobster text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Mutton</h2>
 									@sub_menu([]Dish{
 										{name: "Mutton Curry", price: 100},
 										{name: "Mutton Kassa", price: 120},
@@ -161,7 +181,7 @@ templ Menu(name string) {
 									})
 								</div>
 								<div>
-									<h2 class="uppercase text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Egg</h2>
+									<h2 class="font-lobster text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Egg</h2>
 									@sub_menu([]Dish{
 										{name: "Egg Poch", price: 30},
 										{name: "Egg Omelette", price: 30},
@@ -174,7 +194,7 @@ templ Menu(name string) {
 									})
 								</div>
 								<div>
-									<h2 class="uppercase text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Fish</h2>
+									<h2 class="font-lobster text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Fish</h2>
 									@sub_menu([]Dish{
 										{name: "Fish Masala", price: 50},
 										{name: "Fish Curry", price: 30},
@@ -184,7 +204,7 @@ templ Menu(name string) {
 									})
 								</div>
 								<div>
-									<h2 class="uppercase text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Thali</h2>
+									<h2 class="font-lobster text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Thali</h2>
 									@sub_menu([]Dish{
 										{name: "Odia Veg Thali", price: 80},
 										{name: "Paneer Thali", price: 150},
@@ -198,7 +218,7 @@ templ Menu(name string) {
 									})
 								</div>
 								<div>
-									<h2 class="uppercase text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Meals</h2>
+									<h2 class="font-lobster text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Meals</h2>
 									@sub_menu([]Dish{
 										{name: "Rice", price: 20},
 										{name: "Dal", price: 30},
@@ -215,7 +235,7 @@ templ Menu(name string) {
 									})
 								</div>
 								<div>
-									<h2 class="uppercase text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Bread</h2>
+									<h2 class="font-lobster text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Bread</h2>
 									@sub_menu([]Dish{
 										{name: "Roti", price: 05},
 										{name: "Butter Roti", price: 10},
@@ -225,7 +245,7 @@ templ Menu(name string) {
 									})
 								</div>
 								<div>
-									<h2 class="uppercase text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Salads</h2>
+									<h2 class="font-lobster text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Salads</h2>
 									@sub_menu([]Dish{
 										{name: "Cucumber Salad", price: 40},
 										{name: "Onion Salad", price: 30},
@@ -234,7 +254,7 @@ templ Menu(name string) {
 									})
 								</div>
 								<div>
-									<h2 class="uppercase text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Without Onion &amp; Garlic</h2>
+									<h2 class="font-lobster text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Without Onion &amp; Garlic</h2>
 									@sub_menu([]Dish{
 										{name: "Paneer Bharta", price: 100},
 										{name: "Mix Bhaja", price: 60},
@@ -243,7 +263,7 @@ templ Menu(name string) {
 									})
 								</div>
 								<div>
-									<h2 class="uppercase text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Add Ons</h2>
+									<h2 class="font-lobster text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Add Ons</h2>
 									@sub_menu([]Dish{
 										{name: "Masala Papad", price: 30},
 										{name: "Raita", price: 10},
@@ -254,7 +274,7 @@ templ Menu(name string) {
 									})
 								</div>
 								<div>
-									<h2 class="uppercase text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Special Notes</h2>
+									<h2 class="font-lobster text-3xl bg-orange-400 rounded-md font-semibold inline-block px-2">Special Notes</h2>
 									<ul class="block mb-10 font-semibold marker:text-amber-800">
 										<li class="uppercase">Ordered item will take 10-15 mins, Minimum.</li>
 										<li class="uppercase">Double fry items will be charged 10 Rupees Extra.</li>

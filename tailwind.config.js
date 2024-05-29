@@ -5,7 +5,11 @@ module.exports = {
   content: ["./build/**/*.html"],
   darkMode: "class",
   theme: {
-    extend: {},
+    fontFamily: {
+      poppins: ["Poppins", "sans-serif"],
+      lobster: ["Lobster", "sans-serif"],
+      "lobster-two": ['"Lobster Two"', "sans-serif"],
+    },
   },
   plugins: [require("@tailwindcss/typography")],
 };
