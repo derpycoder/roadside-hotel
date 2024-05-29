@@ -1,3 +1,5 @@
+.DS_Store
+
 *.o
 *.a
 *.so
@@ -19,4 +21,5 @@ air
 *_templ.go
 
 tailwindcss
-.DS_Store
+
+bin

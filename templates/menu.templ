@@ -23,7 +23,7 @@ templ Menu(name string) {
 	<!DOCTYPE html>
 	<html
 		lang="en"
-		class="touch-manipulation scroll-smooth"
+		class="touch-pan-y scroll-smooth"
 		x-data="{ darkMode: localStorage.getItem('dark') === 'true'} "
 		x-init="$watch('darkMode', val => localStorage.setItem('dark', val))"
 		x-bind:class="{ 'dark': darkMode }"
@@ -47,7 +47,7 @@ templ Menu(name string) {
 			<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.0/dist/cdn.min.js" integrity="sha256-PZiMkGM0+toVfXqI7x7tzZvftHjfg+m3BeZGjw1sjdI=" crossorigin="anonymous" defer></script>
 		</head>
 		<body
-			class="bg-[#fdefbd] prose prose-sm prose-amber select-none"
+			class="bg-[#fdefbd] prose prose-sm prose-amber select-none overflow-hidden overflow-y-auto"
 			x-data="{showBackToTop: false}"
 			@scroll.window="showBackToTop = window.pageYOffset > 500"
 		>
@@ -164,7 +164,7 @@ templ Menu(name string) {
 									})
 									<img src="chana-masala.png" alt="Chana Masala" width="200" height="200" class="absolute animate-move -right-28 -top-12"/>
 								</div>
-								<div>
+								<div class="relative">
 									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Rice</h2>
 									@sub_menu([]Dish{
 										{name: "Steam Rice", price: 20},
@@ -177,6 +177,7 @@ templ Menu(name string) {
 										{name: "Chicken Biryani", price: 100},
 										{name: "Mutton Biryani", price: 150},
 									})
+									<img src="chicken-biryani.webp" alt="Chicken Biryani" width="300" height="200" class="absolute animate-move -right-40 -top-12"/>
 								</div>
 								<div>
 									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Chicken</h2>
@@ -253,9 +254,8 @@ templ Menu(name string) {
 										{name: "Mix Bhaja", price: 40},
 										{name: "Mix Roasted Pampad", price: 10},
 									})
-									<img src="chicken-biryani.webp" alt="Chicken Biryani" width="300" height="200" class="absolute animate-move -right-36 -top-12"/>
 								</div>
-								<div>
+								<div class="relative">
 									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Bread</h2>
 									@sub_menu([]Dish{
 										{name: "Roti", price: 05},
@@ -264,8 +264,9 @@ templ Menu(name string) {
 										{name: "Oil Paratha", price: 10},
 										{name: "Butter Paratha", price: 15},
 									})
+									<img src="naan.webp" alt="Naan" width="180" height="200" class="absolute animate-move -right-24 -top-8"/>
 								</div>
-								<div>
+								<div class="relative">
 									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Salads</h2>
 									@sub_menu([]Dish{
 										{name: "Cucumber Salad", price: 40},
@@ -273,6 +274,7 @@ templ Menu(name string) {
 										{name: "Green Salad", price: 50},
 										{name: "Tomato Salad", price: 50},
 									})
+									<img src="onion.png" alt="Onion" width="250" height="200" class="absolute animate-move -right-36 -top-8"/>
 								</div>
 								<div>
 									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Without Onion &amp; Garlic</h2>
@@ -296,12 +298,12 @@ templ Menu(name string) {
 								</div>
 								<div class="relative">
 									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Special Notes</h2>
-									<ul class="block mb-10 font-semibold marker:text-amber-800">
+									<ul class="block mb-10 font-semibold marker:text-amber-800 w-2/3 break-words">
 										<li class="uppercase">Ordered item will take 10-15 mins, Minimum.</li>
 										<li class="uppercase">Double fry items will be charged 10 Rupees Extra.</li>
 										<li class="uppercase">Home Delivery Available.</li>
 									</ul>
-									<img src="fast-food.png" alt="Fast Food" width="200" height="200" class="absolute animate-move right-0 top-2"/>
+									<img src="fast-food.png" alt="Fast Food" width="250" height="200" class="absolute animate-move -right-16 top-2"/>
 								</div>
 							</article>
 						</div>
