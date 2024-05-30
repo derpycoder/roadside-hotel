@@ -2,11 +2,11 @@
 
 ## Desktop
 
-![Screenshot 2024-05-28 at 6 06 31 PM](https://github.com/derpycoder/roadside-hotel/assets/25662120/cae4bb2c-9079-4bc5-9243-b3d156b6e5d1)
+![Screenshot 2024-05-30 at 8 59 42 AM](https://github.com/derpycoder/roadside-hotel/assets/25662120/73d9a63f-7299-49c6-b7b8-f4b13e1bf0ef)
 
 ## Mobile
 
-![image](https://github.com/derpycoder/roadside-hotel/assets/25662120/26ab2f06-4b18-4dfd-8f74-d72fcc094c82)
+![mobile-screenshot](https://github.com/derpycoder/roadside-hotel/assets/25662120/fa3b8000-0b8b-485f-810b-2cb418883e93)
 
 ## Run:
 
