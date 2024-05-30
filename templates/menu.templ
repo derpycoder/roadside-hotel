@@ -2,6 +2,7 @@ package templates
 
 // import "strconv"
 import "fmt"
+import "time"
 
 type Dish struct {
 	name  string
@@ -23,7 +24,7 @@ templ Menu(name string) {
 	<!DOCTYPE html>
 	<html
 		lang="en"
-		class="touch-pan-y scroll-smooth"
+		class="touch-pan-y scroll-smooth overflow-x-hidden"
 		x-data="{ darkMode: localStorage.getItem('dark') === 'true'} "
 		x-init="$watch('darkMode', val => localStorage.setItem('dark', val))"
 		x-bind:class="{ 'dark': darkMode }"
@@ -32,22 +33,24 @@ templ Menu(name string) {
 			<meta charset="UTF-8"/>
 			<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width"/>
 			<title>The Roadside Hotel</title>
-			<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="favicon-192x192.png"/>
-			<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="favicon-180x180.png"/>
-			<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"/>
-			<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"/>
+			<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="./icons/favicon-192x192.png"/>
+			<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="./icons/favicon-180x180.png"/>
+			<link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png"/>
+			<link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png"/>
 			<link rel="manifest" href="site.webmanifest"/>
 			<link rel="stylesheet" type="text/css" href="styles.css"/>
 			<meta property="og:title" content="The Roadside Hotel"/>
-			<meta property="og:image" sizes="1280x640" content="screenshot.png"/>
+			<meta property="og:image" sizes="1280x720" content="./images/desktop-screenshot.png"/>
 			<meta property="og:description" content="The Roadside Hotel is where you get cuisine your heart desires. From local delicacies to continental cuisines."/>
+			<meta property="og:type" content="website"/>
+			<meta property="og:updated_time" content={ fmt.Sprintf("%d", time.Now().UnixNano()) }/>
 			<link rel="preconnect" href="https://fonts.googleapis.com"/>
 			<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 			<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"/>
 			<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.0/dist/cdn.min.js" integrity="sha256-PZiMkGM0+toVfXqI7x7tzZvftHjfg+m3BeZGjw1sjdI=" crossorigin="anonymous" defer></script>
 		</head>
 		<body
-			class="bg-[#fdefbd] prose prose-sm prose-amber select-none overflow-hidden overflow-y-auto"
+			class="bg-[#fdefbd] prose prose-sm prose-amber select-none"
 			x-data="{showBackToTop: false}"
 			@scroll.window="showBackToTop = window.pageYOffset > 500"
 		>
@@ -80,7 +83,7 @@ templ Menu(name string) {
 						<div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
 							<div class="border-b border-amber-600">
 								<div class="flex h-16 items-center justify-between px-4 sm:px-0">
-									<img src="logo.png" alt="Logo" width="50" height="50" class="brightness-125 contrast-200 saturate-200"/>
+									<img src="./images/logo-light.png" alt="Logo" width="50" height="50" class="brightness-125 contrast-200 saturate-200"/>
 								</div>
 							</div>
 						</div>
@@ -116,7 +119,7 @@ templ Menu(name string) {
 										{name: "Chicken Soup", price: 35},
 										{name: "Egg Chicken Soup", price: 40},
 									})
-									<img src="tomato.png" alt="Tomato" width="200" height="200" class="absolute animate-move -left-28 -top-28"/>
+									<img src="./images/tomato.png" alt="Tomato" width="200" height="200" class="absolute animate-move -left-28 -top-28"/>
 								</div>
 								<div class="relative">
 									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Noodles</h2>
@@ -128,7 +131,7 @@ templ Menu(name string) {
 										{name: "Chicken Noodles", price: 45},
 										{name: "Egg Chicken Noodles", price: 50},
 									})
-									<img src="noodle.png" alt="Noodles" width="225" height="200" class="absolute animate-move -right-28 -top-8"/>
+									<img src="./images/noodle.png" alt="Noodles" width="225" height="200" class="absolute animate-move -right-28 -top-8"/>
 								</div>
 								<div class="relative">
 									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Manchurian &amp; Rolls</h2>
@@ -141,6 +144,7 @@ templ Menu(name string) {
 										{name: "Egg Manchurian", price: 45},
 										{name: "Chicken Manchurian", price: 50},
 									})
+									<img src="./images/rolls.png" alt="Rolls" width="225" height="200" class="absolute animate-move -right-32 -top-16"/>
 								</div>
 								<div class="relative">
 									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Main Course</h2>
@@ -162,7 +166,7 @@ templ Menu(name string) {
 										{name: "Plain Sabji", price: 35},
 										{name: "Alu Parwal Sabji", price: 30},
 									})
-									<img src="chana-masala.png" alt="Chana Masala" width="200" height="200" class="absolute animate-move -right-28 -top-12"/>
+									<img src="./images/chana-masala.png" alt="Chana Masala" width="200" height="200" class="absolute animate-move -right-28 -top-12"/>
 								</div>
 								<div class="relative">
 									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Rice</h2>
@@ -177,9 +181,9 @@ templ Menu(name string) {
 										{name: "Chicken Biryani", price: 100},
 										{name: "Mutton Biryani", price: 150},
 									})
-									<img src="chicken-biryani.webp" alt="Chicken Biryani" width="300" height="200" class="absolute animate-move -right-40 -top-12"/>
+									<img src="./images/chicken-biryani.png" alt="Chicken Biryani" width="200" height="200" class="absolute animate-move -right-28 -top-12"/>
 								</div>
-								<div>
+								<div class="relative">
 									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Chicken</h2>
 									@sub_menu([]Dish{
 										{name: "Chicken Curry", price: 80},
@@ -192,16 +196,18 @@ templ Menu(name string) {
 										{name: "Chicken Poda", price: 80},
 										{name: "Chicken Kadai", price: 100},
 									})
+									<img src="./images/tandoori-chicken.png" alt="Tandoori Chicken" width="200" height="200" class="absolute animate-move -right-28 -top-12"/>
 								</div>
-								<div>
+								<div class="relative">
 									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Mutton</h2>
 									@sub_menu([]Dish{
 										{name: "Mutton Curry", price: 100},
 										{name: "Mutton Kassa", price: 120},
 										{name: "Mutton Alu Jholo", price: 130},
 									})
+									<img src="./images/rogan-josh.png" alt="Rogan Josh" width="200" height="200" class="absolute animate-move -right-28 -top-4"/>
 								</div>
-								<div>
+								<div class="relative">
 									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Egg</h2>
 									@sub_menu([]Dish{
 										{name: "Egg Poch", price: 30},
@@ -213,8 +219,9 @@ templ Menu(name string) {
 										{name: "Egg Butter Masala", price: 60},
 										{name: "Egg Tadka", price: 50},
 									})
+									<img src="./images/omlette.png" alt="Omlette" width="200" height="200" class="absolute animate-move -right-28 -top-4"/>
 								</div>
-								<div>
+								<div class="relative">
 									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Fish</h2>
 									@sub_menu([]Dish{
 										{name: "Fish Masala", price: 50},
@@ -223,8 +230,9 @@ templ Menu(name string) {
 										{name: "Fish Fry", price: 40},
 										{name: "Fish Chilly", price: 50},
 									})
+									<img src="./images/fish-curry.png" alt="Fish Curry" width="180" height="200" class="absolute animate-move -right-24 -top-12"/>
 								</div>
-								<div>
+								<div class="relative">
 									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Thali</h2>
 									@sub_menu([]Dish{
 										{name: "Odia Veg Thali", price: 80},
@@ -237,6 +245,7 @@ templ Menu(name string) {
 										{name: "Chicken Thali", price: 150},
 										{name: "Mutton Thali", price: 180},
 									})
+									<img src="./images/thali.png" alt="Thali" width="180" height="200" class="absolute animate-move -right-24 -top-12"/>
 								</div>
 								<div class="relative">
 									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Meals</h2>
@@ -254,6 +263,7 @@ templ Menu(name string) {
 										{name: "Mix Bhaja", price: 40},
 										{name: "Mix Roasted Pampad", price: 10},
 									})
+									<img src="./images/rice.png" alt="Rice" width="200" height="200" class="absolute animate-move -right-28 -top-8"/>
 								</div>
 								<div class="relative">
 									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Bread</h2>
@@ -264,7 +274,7 @@ templ Menu(name string) {
 										{name: "Oil Paratha", price: 10},
 										{name: "Butter Paratha", price: 15},
 									})
-									<img src="naan.webp" alt="Naan" width="180" height="200" class="absolute animate-move -right-24 -top-8"/>
+									<img src="./images/naan.webp" alt="Naan" width="180" height="200" class="absolute animate-move -right-24 -top-8"/>
 								</div>
 								<div class="relative">
 									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Salads</h2>
@@ -274,9 +284,9 @@ templ Menu(name string) {
 										{name: "Green Salad", price: 50},
 										{name: "Tomato Salad", price: 50},
 									})
-									<img src="onion.png" alt="Onion" width="250" height="200" class="absolute animate-move -right-36 -top-8"/>
+									<img src="./images/onion.png" alt="Onion" width="250" height="200" class="absolute animate-move -right-36 -top-8"/>
 								</div>
-								<div>
+								<div class="relative">
 									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Without Onion &amp; Garlic</h2>
 									@sub_menu([]Dish{
 										{name: "Paneer Bharta", price: 100},
@@ -284,8 +294,9 @@ templ Menu(name string) {
 										{name: "Dal Fry", price: 50},
 										{name: "Santula", price: 70},
 									})
+									<img src="./images/tadka.png" alt="Tadka" width="200" height="200" class="absolute animate-move -right-28 -top-12"/>
 								</div>
-								<div>
+								<div class="relative">
 									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Add Ons</h2>
 									@sub_menu([]Dish{
 										{name: "Masala Papad", price: 30},
@@ -295,6 +306,7 @@ templ Menu(name string) {
 										{name: "Mineral Bottle", price: 20},
 										{name: "Gulab Jamun", price: 20},
 									})
+									<img src="./images/gulaab-jamun.png" alt="Gulaab Jamun" width="180" height="200" class="absolute animate-move -right-24 -top-4"/>
 								</div>
 								<div class="relative">
 									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Special Notes</h2>
@@ -303,7 +315,7 @@ templ Menu(name string) {
 										<li class="uppercase">Double fry items will be charged 10 Rupees Extra.</li>
 										<li class="uppercase">Home Delivery Available.</li>
 									</ul>
-									<img src="fast-food.png" alt="Fast Food" width="250" height="200" class="absolute animate-move -right-16 top-2"/>
+									<img src="./images/fast-food.png" alt="Fast Food" width="250" height="200" class="absolute animate-move -right-16 top-2"/>
 								</div>
 							</article>
 						</div>

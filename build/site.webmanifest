@@ -1,13 +1,40 @@
 {
+   "id": "/",
    "start_url": "/",
    "name": "The Roadside Hotel",
    "short_name": "Roadside Hotel",
    "icons": [
       {
-         "src": "favicon-192x192.png",
+         "src": "./icons/favicon-180x180.png",
+         "sizes": "180x180",
+         "type": "image/png",
+         "purpose": "any"
+      },
+      {
+         "src": "./icons/favicon-192x192.png",
          "sizes": "192x192",
-         "type": "image/png"
+         "type": "image/png",
+         "purpose": "maskable"
       }
+   ],
+   "screenshots": [
+      {
+         "src": "./images/desktop-screenshot.png",
+         "sizes": "1280x720",
+         "type": "image/png",
+         "form_factor": "wide",
+         "label": "Desktop view of Roadside Hotel's Menu"
+      },
+      {
+         "src": "./images/mobile-screenshot.png",
+         "sizes": "1280x720",
+         "type": "image/png",
+         "form_factor": "narrow",
+         "label": "Mobile view of Roadside Hotel's Menu"
+      }
+   ],
+   "display_override": [
+      "window-controls-overlay"
    ],
    "theme_color": "#8d2a18",
    "background_color": "#fdefbd",
