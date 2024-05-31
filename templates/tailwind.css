@@ -194,13 +194,6 @@ Not supports in Firefox and IE */
   overflow-y: scroll;
 }
 
-@media only screen and (max-width: 1045px) {
-  html,
-  body {
-    overflow-x: clip;
-  }
-}
-
 .wave {
   height: 500px;
   transform: rotateX(180deg);
