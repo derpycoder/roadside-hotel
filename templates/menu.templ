@@ -95,11 +95,6 @@ templ Menu(name string) {
 						<div class="absolute rotate-180 w-full -bottom-32 pointer-events-none">
 							// https://codepen.io/yy/pen/YaQBdW
 							<div class="wave"></div>
-							// https://codepen.io/chauhanswapnil/pen/eYvZqXy
-							// <div class="lamp">
-							// 	<div class="lava -one"></div>
-							// 	<div class="lava -two"></div>
-							// </div>
 						</div>
 						<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex">
 							<h1 class="flex-col font-bold bg-gradient-to-b bg-clip-text text-transparent from-red-900 via-50% via-orange-800 to-amber-600 font-lobster">
@@ -111,7 +106,7 @@ templ Menu(name string) {
 					</header>
 				</div>
 				<main>
-					<div class="max-w-7xl absolute z-20 top-[250px] left-[50%] -translate-x-1/2 w-full overflow-x-hidden py-[100px] px-[15px]">
+					<div class="max-w-7xl absolute z-20 top-[250px] left-[50%] -translate-x-1/2 w-full overflow-x-hidden pt-[100px] px-[15px] pb-0">
 						<div class="rounded-3xl backdrop-blur-md backdrop-sepia backdrop-saturate bg-amber-100/60 px-5 py-6 shadow">
 							<!-- Your content -->
 							<article class="text-amber-800 font-medium">
@@ -328,8 +323,25 @@ templ Menu(name string) {
 								</div>
 							</article>
 						</div>
-						<footer class="h-[30svh] relative">
+						<footer class="relative overflow-hidden h-[300px]">
+							// https://codepen.io/chauhanswapnil/pen/eYvZqXy
+							<div class="lamp absolute bottom-0">
+								<div class="lava -one"></div>
+								<div class="lava -two"></div>
+							</div>
 							<img src="./images/cutting-board.png" alt="Cutting Board" width="200" height="200" class="absolute animate-move right-0 -top-10"/>
+							<div class="flex justify-center items-end h-full">
+								<div class="text-orange-900 animate-hover">
+									Made with
+									<svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" viewBox="0 0 24 24">
+										<path class="fill-orange-800" d="M8.106 18.247C5.298 16.083 2 13.542 2 9.137 2 4.274 7.5.825 12 5.501l2 1.998a.75.75 0 0 0 1.06-1.06L13.13 4.506C17.369 1.403 22 4.675 22 9.137c0 4.405-3.298 6.946-6.106 9.11-.292.225-.579.445-.856.664C14 19.729 13 20.5 12 20.5s-2-.77-3.038-1.59c-.277-.218-.564-.438-.856-.663Z"></path>
+									</svg>
+									by
+									<span class="font-semibold">
+										Abhijit
+									</span>
+								</div>
+							</div>
 						</footer>
 					</div>
 				</main>

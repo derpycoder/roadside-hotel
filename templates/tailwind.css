@@ -113,21 +113,20 @@ html.dark .ball {
 
 .lamp {
   position: fixed;
-  transform: rotate(80deg);
-
-  left: 73%;
-  top: 80%;
-  height: 100svh;
-  width: 100svw;
+  left: 0;
+  bottom: 0;
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .lava {
   position: absolute;
+  height: 500px;
+  width: 500px;
+  left: -250px;
+  bottom: -218px;
   opacity: 0.4;
-  width: 1500px;
-  height: 1300px;
-  margin-left: -150px;
-  margin-top: -250px;
   border-radius: 43%;
 }
 
@@ -143,13 +142,13 @@ html.dark .ball {
 .lava.-one {
   animation: rotate 10000ms infinite linear;
   opacity: 5%;
-  background: white;
+  background: rgb(236, 153, 35);
 }
 
 .lava.-two {
   animation: rotate 6000ms infinite linear;
   opacity: 10%;
-  background: white;
+  background: rgb(207, 115, 18);
 }
 
 /* Customize website's scrollbar like Mac OS
@@ -321,6 +320,22 @@ Not supports in Firefox and IE */
 }
 .animate-move {
   animation: move 7s infinite !important;
+}
+
+@keyframes hover {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-hover {
+  animation: hover 3s ease 0s infinite alternate none;
 }
 
 /* Animations */
