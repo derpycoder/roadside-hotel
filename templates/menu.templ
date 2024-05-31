@@ -24,7 +24,7 @@ templ Menu(name string) {
 	<!DOCTYPE html>
 	<html
 		lang="en"
-		class="touch-pan-x scroll-smooth overflow-x-hidden max-w-full w-full"
+		class="touch-pan-x scroll-smooth"
 		x-data="{ darkMode: localStorage.getItem('dark') === 'true'} "
 		x-init="$watch('darkMode', val => localStorage.setItem('dark', val))"
 		x-bind:class="{ 'dark': darkMode }"
@@ -51,9 +51,9 @@ templ Menu(name string) {
 			<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.0/dist/cdn.min.js" integrity="sha256-PZiMkGM0+toVfXqI7x7tzZvftHjfg+m3BeZGjw1sjdI=" crossorigin="anonymous" defer></script>
 		</head>
 		<body
-			class="bg-[#fdefbd] prose prose-sm prose-amber select-none overflow-x-hidden max-w-full w-full touch-pan-x"
-			x-data="{showBackToTop: true}"
-			x-on:scroll.window="show = window.pageYOffset >= 1000"
+			class="bg-[#fdefbd] prose prose-sm prose-amber select-none"
+			x-data="{showBackToTop: false}"
+			x-on:scroll.window="showBackToTop = window.pageYOffset >= 500"
 		>
 			<!-- Switcher -->
 			<div class="fixed top-[30%] -right-2 z-50">
@@ -68,7 +68,17 @@ templ Menu(name string) {
 			</div>
 			<!-- Switcher -->
 			<!-- Back to top -->
-			<div id="wrapper" class="">
+			<a
+				href="#"
+				id="back-to-top"
+				x-ref="backToTop"
+				class="back-to-top fixed text-lg rounded-full bottom-5 right-1 h-9 w-9 text-center bg-orange-800 text-amber-100 leading-9 no-underline font-bold z-50"
+				:class="showBackToTop ? 'opacity-100 animate-fade-up animate-once animate-ease-in-out' : 'opacity-0 animate-fade-down animate-once animate-ease-in-out'"
+			>
+				↑
+			</a>
+			<!-- Back to top -->
+			<div>
 				<div class="pb-32 bg-gradient-to-b from-amber-800 via-orange-400 to-yellow-400 fixed w-full top-0 z-10">
 					// https://codepen.io/404ryannotfound/pen/MWwOrWy
 					<div class="blobpit"></div>
@@ -101,7 +111,7 @@ templ Menu(name string) {
 					</header>
 				</div>
 				<main>
-					<div class="max-w-7xl px-4 pb-12 sm:px-6 lg:px-8 absolute z-20 top-[350px] left-[50%] -translate-x-1/2 w-full">
+					<div class="max-w-7xl absolute z-20 top-[250px] left-[50%] -translate-x-1/2 w-full overflow-hidden py-[100px] px-[15px]">
 						<div class="rounded-3xl backdrop-blur-sm backdrop-sepia backdrop-saturate bg-amber-100/60 px-5 py-6 shadow">
 							<!-- Your content -->
 							<article class="text-amber-800 font-medium">

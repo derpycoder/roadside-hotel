@@ -186,18 +186,19 @@ Not supports in Firefox and IE */
 }
 
 /* div box */
-body {
-  background-color: #babac0;
-}
 .scrollbar {
   height: 75vh;
   width: 25vw;
   min-width: 150px;
-  background: #fff;
+  background: #fdefbd;
   overflow-y: scroll;
 }
-.overflow {
-  min-height: 100vh;
+
+@media only screen and (max-width: 1045px) {
+  html,
+  body {
+    overflow-x: clip;
+  }
 }
 
 .wave {
@@ -252,6 +253,18 @@ body {
   }
 }
 
+@keyframes fade-down {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+}
+
 .animate-ease-in-out {
   animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -262,6 +275,9 @@ body {
 
 .animate-fade-up {
   animation: fade-up 1s both;
+}
+.animate-fade-down {
+  animation: fade-down 1s both;
 }
 
 @keyframes motion {
@@ -318,8 +334,8 @@ body {
 
 /* Blob Pit */
 .blobpit {
-  height: 50svh;
-  width: 100svw;
+  height: 500px;
+  width: 2000px;
   overflow: hidden;
   position: absolute;
   left: 0;
@@ -330,13 +346,13 @@ body {
 .blobpit::before,
 .blobpit::after {
   content: "";
-  width: 70vmax;
-  height: 70vmax;
+  width: 500px;
+  height: 500px;
   position: absolute;
   background: rgba(251, 170, 45, 0.44);
   /* background: rgba(253, 239, 189, 0.22); */
-  left: -20vmin;
-  top: -20vmin;
+  left: -200px;
+  top: -200px;
   animation: morph 15s linear infinite alternate, spin 20s linear infinite;
   z-index: 1;
   will-change: border-radius, transform;
@@ -344,10 +360,10 @@ body {
   pointer-events: none;
 }
 .blobpit::after {
-  width: 70vmin;
-  height: 70vmin;
+  width: 500px;
+  height: 500px;
   left: auto;
-  right: -10vmin;
+  right: -100px;
   top: auto;
   bottom: 0;
   animation: morph 10s linear infinite alternate,
