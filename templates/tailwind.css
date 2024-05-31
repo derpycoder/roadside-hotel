@@ -111,24 +111,45 @@ html.dark .ball {
 }
 /* Fonts End */
 
-.custom-shape-divider-bottom-1716888327 {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+.lamp {
+  position: fixed;
+  transform: rotate(80deg);
+
+  left: 73%;
+  top: 80%;
+  height: 100svh;
   width: 100svw;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotateX(180deg);
 }
 
-.custom-shape-divider-bottom-1716888327 svg {
-  position: relative;
-  display: block;
-  width: 2000px;
+.lava {
+  position: absolute;
+  opacity: 0.4;
+  width: 1500px;
+  height: 1300px;
+  margin-left: -150px;
+  margin-top: -250px;
+  border-radius: 43%;
 }
 
-.custom-shape-divider-bottom-1716888327 .shape-fill {
-  fill: #ffffff82;
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
+
+.lava.-one {
+  animation: rotate 10000ms infinite linear;
+  opacity: 5%;
+  background: white;
+}
+
+.lava.-two {
+  animation: rotate 6000ms infinite linear;
+  opacity: 10%;
+  background: white;
 }
 
 /* Customize website's scrollbar like Mac OS
@@ -179,7 +200,69 @@ body {
   min-height: 100vh;
 }
 
+.wave {
+  height: 500px;
+  transform: rotateX(180deg);
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='198'%3e%3cdefs%3e%3clinearGradient id='a' x1='50%25' x2='50%25' y1='-10.959%25' y2='100%25'%3e%3cstop stop-color='#ffffff21' stop-opacity='.05' offset='0%25'/%3e%3cstop stop-color='#ffffff21' offset='100%25'/%3e%3c/linearGradient%3e%3c/defs%3e%3cpath fill='#ffffff4a' fill-rule='evenodd' d='M.005 121C311 121 409.898-.25 811 0c400 0 500 121 789 121v77H0s.005-48 .005-77z'/%3e%3c/svg%3e"),
+    url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='198'%3e%3cdefs%3e%3clinearGradient id='a' x1='50%25' x2='50%25' y1='-10.959%25' y2='100%25'%3e%3cstop stop-color='#ffffff21' stop-opacity='.05' offset='0%25'/%3e%3cstop stop-color='#ffffff21' offset='100%25'/%3e%3c/linearGradient%3e%3c/defs%3e%3cpath fill='#ffffff4a' fill-rule='evenodd' d='M.005 121C311 121 409.898-.25 811 0c400 0 500 121 789 121v77H0s.005-48 .005-77z'/%3e%3c/svg%3e"),
+    url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='198'%3e%3cdefs%3e%3clinearGradient id='a' x1='50%25' x2='50%25' y1='-10.959%25' y2='100%25'%3e%3cstop stop-color='#ffffff21' stop-opacity='.05' offset='0%25'/%3e%3cstop stop-color='#ffffff21' offset='100%25'/%3e%3c/linearGradient%3e%3c/defs%3e%3cpath fill='#ffffff4a' fill-rule='evenodd' d='M.005 121C311 121 409.898-.25 811 0c400 0 500 121 789 121v77H0s.005-48 .005-77z'/%3e%3c/svg%3e"),
+    url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='198'%3e%3cdefs%3e%3clinearGradient id='a' x1='50%25' x2='50%25' y1='-10.959%25' y2='100%25'%3e%3cstop stop-color='#ffffff21' stop-opacity='.05' offset='0%25'/%3e%3cstop stop-color='#ffffff21' offset='100%25'/%3e%3c/linearGradient%3e%3c/defs%3e%3cpath fill='#ffffff4a' fill-rule='evenodd' d='M.005 121C311 121 409.898-.25 811 0c400 0 500 121 789 121v77H0s.005-48 .005-77z'/%3e%3c/svg%3e");
+  background-repeat: repeat-x;
+  background-size: 1600px 50%, 1600px 45%, 1600px 55%, 1600px 40%;
+  background-position: 0 130%, -250px 130%, 500px 130%, 700px 130%;
+
+  animation: 20s waves linear infinite forwards;
+}
+
 /* Animations */
+@keyframes wave {
+  0% {
+    transform: translateY(200px);
+  }
+  25% {
+    transform: translateY(0px) rotate(10deg);
+  }
+  75% {
+    transform: translateY(0px) rotate(-10deg);
+  }
+  100% {
+    transform: translateY(200px);
+  }
+}
+
+.animate-wave {
+  animation: wave 3s infinite ease-in-out;
+}
+
+@keyframes waves {
+  to {
+    background-position: 1600px 130%, 3150px 130%, 5300px 130%;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-ease-in-out {
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-once {
+  animation-iteration-count: 1;
+}
+
+.animate-fade-up {
+  animation: fade-up 1s both;
+}
 
 @keyframes motion {
   0% {
@@ -204,32 +287,6 @@ body {
 }
 .animate-motion {
   animation: motion 7s infinite !important;
-}
-
-@keyframes dz {
-  0% {
-    transform: translate(0);
-  }
-
-  25% {
-    transform: translate(-15px);
-  }
-
-  50% {
-    transform: translate(-8px);
-  }
-
-  75% {
-    transform: translate(-15px);
-  }
-
-  100% {
-    transform: translate(0);
-  }
-}
-
-.animate-dz {
-  animation: dz 7s infinite !important;
 }
 
 @keyframes move {
@@ -258,3 +315,59 @@ body {
 }
 
 /* Animations */
+
+/* Blob Pit */
+.blobpit {
+  height: 50svh;
+  width: 100svw;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.blobpit::before,
+.blobpit::after {
+  content: "";
+  width: 70vmax;
+  height: 70vmax;
+  position: absolute;
+  background: rgba(251, 170, 45, 0.44);
+  /* background: rgba(253, 239, 189, 0.22); */
+  left: -20vmin;
+  top: -20vmin;
+  animation: morph 15s linear infinite alternate, spin 20s linear infinite;
+  z-index: 1;
+  will-change: border-radius, transform;
+  transform-origin: 55% 55%;
+  pointer-events: none;
+}
+.blobpit::after {
+  width: 70vmin;
+  height: 70vmin;
+  left: auto;
+  right: -10vmin;
+  top: auto;
+  bottom: 0;
+  animation: morph 10s linear infinite alternate,
+    spin 26s linear infinite reverse;
+  transform-origin: 20% 20%;
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
+  }
+  100% {
+    border-radius: 40% 60%;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* Blob Pit */
