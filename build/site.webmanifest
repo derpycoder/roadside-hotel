@@ -36,7 +36,7 @@
    "display_override": [
       "window-controls-overlay"
    ],
-   "theme_color": "#8d2a18",
-   "background_color": "#8d2a18",
+   "theme_color": "#fdefbd",
+   "background_color": "#fdefbd",
    "display": "standalone"
 }
