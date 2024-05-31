@@ -24,7 +24,7 @@ templ Menu(name string) {
 	<!DOCTYPE html>
 	<html
 		lang="en"
-		class="touch-manipulation scroll-smooth overflow-x-hidden"
+		class="touch-pan-y scroll-smooth overflow-x-hidden"
 		x-data="{ darkMode: localStorage.getItem('dark') === 'true'} "
 		x-init="$watch('darkMode', val => localStorage.setItem('dark', val))"
 		x-bind:class="{ 'dark': darkMode }"
