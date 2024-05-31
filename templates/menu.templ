@@ -68,15 +68,15 @@ templ Menu(name string) {
 			</div>
 			<!-- Switcher -->
 			<!-- Back to top -->
-			<a
-				href="#"
+			<button
 				id="back-to-top"
 				x-ref="backToTop"
 				class="back-to-top fixed text-lg rounded-full bottom-5 right-1 h-9 w-9 text-center bg-orange-800 text-amber-100 leading-9 no-underline font-bold z-50"
 				:class="showBackToTop ? 'opacity-100 animate-fade-up animate-once animate-ease-in-out' : 'opacity-0 animate-fade-down animate-once animate-ease-in-out'"
+				x-on:click="window.scrollTo({top: 0, behavior: 'smooth'})"
 			>
 				↑
-			</a>
+			</button>
 			<!-- Back to top -->
 			<div>
 				<div class="pb-32 bg-gradient-to-b from-amber-800 via-orange-400 to-yellow-400 fixed w-full top-0 z-10">
