@@ -72,7 +72,7 @@ templ Menu(name string) {
 				id="back-to-top"
 				x-ref="backToTop"
 				class="back-to-top fixed text-lg rounded-full bottom-5 right-1 h-9 w-9 text-center bg-orange-800 text-amber-100 leading-9 no-underline font-bold z-50"
-				:class="showBackToTop ? 'opacity-100 animate-fade-up animate-once animate-ease-in-out' : 'opacity-0 animate-fade-down animate-once animate-ease-in-out'"
+				:class="showBackToTop ? 'animate-fade-up animate-once animate-ease-in-out' : 'animate-fade-down animate-once animate-ease-in-out'"
 				x-on:click="window.scrollTo({top: 0, behavior: 'smooth'})"
 			>
 				↑
@@ -96,7 +96,10 @@ templ Menu(name string) {
 							// https://codepen.io/yy/pen/YaQBdW
 							<div class="wave"></div>
 						</div>
-						<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex">
+						<div
+							class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex"
+							:class="showBackToTop ? 'animate-fade-down animate-once animate-ease-in-out' : 'animate-fade-up animate-once animate-ease-in-out'"
+						>
 							<h1 class="flex-col font-bold bg-gradient-to-b bg-clip-text text-transparent from-red-900 via-50% via-orange-800 to-amber-600 font-lobster">
 								<div class="text-7xl">The</div>
 								<div class="text-7xl">Roadside</div>
@@ -107,7 +110,7 @@ templ Menu(name string) {
 				</div>
 				<main>
 					<div class="max-w-7xl absolute z-20 top-[250px] left-[50%] -translate-x-1/2 w-full overflow-x-hidden pt-[100px] px-[15px] pb-0">
-						<div class="rounded-3xl backdrop-blur-md backdrop-sepia backdrop-saturate bg-amber-100/60 px-5 py-6 shadow">
+						<div class="rounded-3xl backdrop-blur-lg bg-amber-100/60 px-5 py-6 shadow">
 							<!-- Your content -->
 							<article class="text-amber-800 font-medium">
 								<div class="relative">
