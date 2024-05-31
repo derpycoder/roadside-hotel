@@ -24,7 +24,7 @@ templ Menu(name string) {
 	<!DOCTYPE html>
 	<html
 		lang="en"
-		class="touch-pan-x scroll-smooth"
+		class="touch-manipulation scroll-smooth"
 		x-data="{ darkMode: localStorage.getItem('dark') === 'true'} "
 		x-init="$watch('darkMode', val => localStorage.setItem('dark', val))"
 		x-bind:class="{ 'dark': darkMode }"
@@ -111,7 +111,7 @@ templ Menu(name string) {
 					</header>
 				</div>
 				<main>
-					<div class="max-w-7xl absolute z-20 top-[250px] left-[50%] -translate-x-1/2 w-full overflow-hidden py-[100px] px-[15px]">
+					<div class="max-w-7xl absolute z-20 top-[250px] left-[50%] -translate-x-1/2 w-full overflow-x-hidden py-[100px] px-[15px]">
 						<div class="rounded-3xl backdrop-blur-sm backdrop-sepia backdrop-saturate bg-amber-100/60 px-5 py-6 shadow">
 							<!-- Your content -->
 							<article class="text-amber-800 font-medium">
