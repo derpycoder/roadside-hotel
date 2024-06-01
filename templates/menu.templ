@@ -55,18 +55,18 @@ templ Menu(name string) {
 			x-data="{showBackToTop: false}"
 			x-on:scroll.window="showBackToTop = window.pageYOffset >= 500"
 		>
-			<!-- Switcher -->
-			<div class="fixed top-[30%] -right-2 z-50">
-				<span class="relative inline-block rotate-90">
-					<input type="checkbox" class="checkbox opacity-0 absolute" id="chk" @click="darkMode = !darkMode"/>
-					<label class="label bg-orange-900 dark:bg-amber-100 shadow dark:shadow-orange-800 cursor-pointer rounded-full flex justify-between items-center p-1 w-14 h-8" for="chk">
-						<span>🌙</span>
-						<span>🌞</span>
-						<span class="ball bg-amber-100 dark:bg-orange-900 rounded-full absolute top-[2px] left-[2px] w-7 h-7"></span>
-					</label>
-				</span>
-			</div>
-			<!-- Switcher -->
+			// <!-- Switcher -->
+			// <div class="fixed top-[30%] -right-2 z-50">
+			// 	<span class="relative inline-block rotate-90">
+			// 		<input type="checkbox" class="checkbox opacity-0 absolute" id="chk" @click="darkMode = !darkMode"/>
+			// 		<label class="label bg-orange-900 dark:bg-amber-100 shadow dark:shadow-orange-800 cursor-pointer rounded-full flex justify-between items-center p-1 w-14 h-8" for="chk">
+			// 			<span>🌙</span>
+			// 			<span>🌞</span>
+			// 			<span class="ball bg-amber-100 dark:bg-orange-900 rounded-full absolute top-[2px] left-[2px] w-7 h-7"></span>
+			// 		</label>
+			// 	</span>
+			// </div>
+			// <!-- Switcher -->
 			<!-- Back to top -->
 			<button
 				id="back-to-top"
@@ -118,8 +118,10 @@ templ Menu(name string) {
 								<div class="relative">
 									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Soup</h2>
 									@sub_menu([]Dish{
-										{name: "Veg Soup", price: 20},
-										{name: "Paneer Soup", price: 30},
+										{name: "Veg Soup", price: 40},
+										{name: "Sweet Corn Soup", price: 60},
+										{name: "Manchurian Soup", price: 60},
+										{name: "Paneer Soup", price: 80},
 										{name: "Egg Soup", price: 30},
 										{name: "Chicken Soup", price: 35},
 										{name: "Egg Chicken Soup", price: 40},
