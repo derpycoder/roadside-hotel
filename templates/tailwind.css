@@ -13,6 +13,10 @@ img {
     drop-shadow(0 4px 3px rgba(0, 0, 0, 0.4));
 }
 
+h2 {
+  text-shadow: -4px 4px 4px #f27d2f;
+}
+
 html .ball {
   -webkit-transition: -webkit-transform 0.2s linear;
   transition: -webkit-transform 0.2s linear;

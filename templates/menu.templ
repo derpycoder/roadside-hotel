@@ -71,7 +71,7 @@ templ Menu(name string) {
 			<button
 				id="back-to-top"
 				x-ref="backToTop"
-				class="back-to-top fixed text-lg rounded-full bottom-5 right-1 h-9 w-9 text-center bg-orange-800 text-amber-100 leading-9 no-underline font-bold z-50"
+				class="back-to-top fixed text-lg rounded-full bottom-4 right-4 h-9 w-9 text-center bg-orange-800 text-amber-100 leading-9 no-underline font-bold z-50"
 				:class="showBackToTop ? 'animate-fade-up animate-once animate-ease-in-out' : 'animate-fade-down animate-once animate-ease-in-out'"
 				x-on:click="window.scrollTo({top: 0, behavior: 'smooth'})"
 			>
@@ -116,7 +116,7 @@ templ Menu(name string) {
 							<!-- Your content -->
 							<article class="text-amber-800 font-medium">
 								<div class="relative">
-									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Soup</h2>
+									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Soup</h2>
 									@sub_menu([]Dish{
 										{name: "Veg Soup", price: 20},
 										{name: "Paneer Soup", price: 30},
@@ -127,7 +127,7 @@ templ Menu(name string) {
 									<img src="./images/tomato.png" alt="Tomato" width="200" height="200" class="absolute animate-move -left-28 -top-28"/>
 								</div>
 								<div class="relative">
-									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Noodles</h2>
+									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Noodles</h2>
 									@sub_menu([]Dish{
 										{name: "Veg Noodles", price: 30},
 										{name: "Paneer Noodles", price: 40},
@@ -139,7 +139,7 @@ templ Menu(name string) {
 									<img src="./images/noodle.png" alt="Noodles" width="225" height="200" class="absolute animate-move -right-28 -top-8"/>
 								</div>
 								<div class="relative">
-									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Manchurian &amp; Rolls</h2>
+									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Manchurian &amp; Rolls</h2>
 									@sub_menu([]Dish{
 										{name: "Veg Roll", price: 30},
 										{name: "Paneer Roll", price: 40},
@@ -152,7 +152,7 @@ templ Menu(name string) {
 									<img src="./images/rolls.png" alt="Rolls" width="225" height="200" class="absolute animate-move -right-32 -top-16"/>
 								</div>
 								<div class="relative">
-									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Main Course</h2>
+									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Main Course</h2>
 									@sub_menu([]Dish{
 										{name: "Dal Fry", price: 40},
 										{name: "Dal Makhani", price: 50},
@@ -174,7 +174,7 @@ templ Menu(name string) {
 									<img src="./images/chana-masala.png" alt="Chana Masala" width="200" height="200" class="absolute animate-move -right-28 -top-12"/>
 								</div>
 								<div class="relative">
-									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Rice</h2>
+									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Rice</h2>
 									@sub_menu([]Dish{
 										{name: "Steam Rice", price: 20},
 										{name: "Jeera Rice", price: 50},
@@ -189,7 +189,7 @@ templ Menu(name string) {
 									<img src="./images/chicken-biryani.png" alt="Chicken Biryani" width="200" height="200" class="absolute animate-move -right-28 -top-12"/>
 								</div>
 								<div class="relative">
-									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Chicken</h2>
+									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Chicken</h2>
 									@sub_menu([]Dish{
 										{name: "Chicken Curry", price: 80},
 										{name: "Chicken Kassa 🌶️🌶️🌶️", price: 80},
@@ -204,7 +204,7 @@ templ Menu(name string) {
 									<img src="./images/tandoori-chicken.png" alt="Tandoori Chicken" width="200" height="200" class="absolute animate-move -right-28 -top-12"/>
 								</div>
 								<div class="relative">
-									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Mutton</h2>
+									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Mutton</h2>
 									@sub_menu([]Dish{
 										{name: "Mutton Curry", price: 100},
 										{name: "Mutton Kassa", price: 120},
@@ -213,7 +213,7 @@ templ Menu(name string) {
 									<img src="./images/rogan-josh.png" alt="Rogan Josh" width="200" height="200" class="absolute animate-move -right-28 -top-4"/>
 								</div>
 								<div class="relative">
-									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Egg</h2>
+									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Egg</h2>
 									@sub_menu([]Dish{
 										{name: "Egg Poch", price: 30},
 										{name: "Egg Omelette", price: 30},
@@ -227,7 +227,7 @@ templ Menu(name string) {
 									<img src="./images/omlette.png" alt="Omlette" width="200" height="200" class="absolute animate-move -right-28 -top-4"/>
 								</div>
 								<div class="relative">
-									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Fish</h2>
+									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Fish</h2>
 									@sub_menu([]Dish{
 										{name: "Fish Masala", price: 50},
 										{name: "Fish Curry", price: 30},
@@ -238,7 +238,7 @@ templ Menu(name string) {
 									<img src="./images/fish-curry.png" alt="Fish Curry" width="180" height="200" class="absolute animate-move -right-24 -top-12"/>
 								</div>
 								<div class="relative">
-									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Thali</h2>
+									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Thali</h2>
 									@sub_menu([]Dish{
 										{name: "Odia Veg Thali", price: 80},
 										{name: "Paneer Thali", price: 150},
@@ -253,7 +253,7 @@ templ Menu(name string) {
 									<img src="./images/thali.png" alt="Thali" width="180" height="200" class="absolute animate-move -right-24 -top-12"/>
 								</div>
 								<div class="relative">
-									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Meals</h2>
+									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Meals</h2>
 									@sub_menu([]Dish{
 										{name: "Rice", price: 20},
 										{name: "Dal", price: 30},
@@ -271,7 +271,7 @@ templ Menu(name string) {
 									<img src="./images/rice.png" alt="Rice" width="200" height="200" class="absolute animate-move -right-28 -top-8"/>
 								</div>
 								<div class="relative">
-									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Bread</h2>
+									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Bread</h2>
 									@sub_menu([]Dish{
 										{name: "Roti", price: 05},
 										{name: "Butter Roti", price: 10},
@@ -282,7 +282,7 @@ templ Menu(name string) {
 									<img src="./images/naan.webp" alt="Naan" width="180" height="200" class="absolute animate-move -right-24 -top-8"/>
 								</div>
 								<div class="relative">
-									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Salads</h2>
+									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Salads</h2>
 									@sub_menu([]Dish{
 										{name: "Cucumber Salad", price: 40},
 										{name: "Onion Salad", price: 30},
@@ -292,7 +292,7 @@ templ Menu(name string) {
 									<img src="./images/salad-bowl.png" alt="Salad" width="225" height="200" class="absolute animate-move -right-32 -top-16"/>
 								</div>
 								<div class="relative">
-									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Without Onion &amp; Garlic</h2>
+									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Without Onion &amp; Garlic</h2>
 									@sub_menu([]Dish{
 										{name: "Paneer Bharta", price: 100},
 										{name: "Mix Bhaja", price: 60},
@@ -302,7 +302,7 @@ templ Menu(name string) {
 									<img src="./images/tadka.png" alt="Tadka" width="200" height="200" class="absolute animate-move -right-28 -top-12"/>
 								</div>
 								<div class="relative">
-									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Add Ons</h2>
+									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Add Ons</h2>
 									@sub_menu([]Dish{
 										{name: "Masala Papad", price: 30},
 										{name: "Raita", price: 10},
@@ -314,7 +314,7 @@ templ Menu(name string) {
 									<img src="./images/gulaab-jamun.png" alt="Gulaab Jamun" width="180" height="200" class="absolute animate-move -right-24 -top-4"/>
 								</div>
 								<div class="relative">
-									<h2 class="font-lobster text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Special Notes</h2>
+									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Special Notes</h2>
 									<ul class="block mb-10 font-semibold marker:text-amber-800 w-2/3 break-words">
 										<li class="uppercase">Ordered item will take 10-15 mins, Minimum.</li>
 										<li class="uppercase">Double fry items will be charged 10 Rupees Extra.</li>
