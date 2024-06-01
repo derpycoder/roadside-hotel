@@ -27,7 +27,7 @@
       },
       {
          "src": "./images/mobile-screenshot.png",
-         "sizes": "620x716",
+         "sizes": "854x750",
          "type": "image/png",
          "form_factor": "narrow",
          "label": "Mobile view of Roadside Hotel's Menu"
