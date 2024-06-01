@@ -1,12 +1,12 @@
 # The Roadside Hotel
 
 ## Desktop
+![desktop-screenshot](https://github.com/derpycoder/roadside-hotel/assets/25662120/84294022-00c6-4645-883c-f290cc90b21b)
 
-![Screenshot 2024-05-30 at 8 59 42 AM](https://github.com/derpycoder/roadside-hotel/assets/25662120/73d9a63f-7299-49c6-b7b8-f4b13e1bf0ef)
 
 ## Mobile
 
-![mobile-screenshot](https://github.com/derpycoder/roadside-hotel/assets/25662120/fa3b8000-0b8b-485f-810b-2cb418883e93)
+![mobile-screenshot](https://github.com/derpycoder/roadside-hotel/assets/25662120/f0b3e6e5-2f85-4365-b784-468f61e6ecac)
 
 ## Run:
 
