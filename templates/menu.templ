@@ -38,11 +38,11 @@ templ Menu(name string) {
 			<!-- Google / Search Engine Tags -->
 			<meta itemprop="name" content="The Roadside Hotel"/>
 			<meta itemprop="description" content="The Roadside Hotel is where you get cuisine your heart desires. From local delicacies to continental cuisines."/>
-			<meta itemprop="image" content="./images/desktop-screenshot.png"/>
+			<meta itemprop="image" content="/images/desktop-screenshot.png"/>
 			<!-- Facebook Meta Tags -->
 			<meta property="og:url" content="https://roadside-hotel.onrender.com"/>
 			<meta property="og:title" content="The Roadside Hotel"/>
-			<meta property="og:image" sizes="1280x720" content="./images/desktop-screenshot.png"/>
+			<meta property="og:image" sizes="1280x720" content="/images/desktop-screenshot.png"/>
 			<meta property="og:description" content="The Roadside Hotel is where you get cuisine your heart desires. From local delicacies to continental cuisines."/>
 			<meta property="og:type" content="website"/>
 			<meta property="og:updated_time" content={ fmt.Sprintf("%d", time.Now().UnixNano()) }/>
@@ -50,12 +50,12 @@ templ Menu(name string) {
 			<meta name="twitter:card" content="summary_large_image"/>
 			<meta name="twitter:title" content="The Roadside Hotel"/>
 			<meta name="twitter:description" content="The Roadside Hotel is where you get cuisine your heart desires. From local delicacies to continental cuisines."/>
-			<meta name="twitter:image" content="./images/desktop-screenshot.png"/>
+			<meta name="twitter:image" content="/images/desktop-screenshot.png"/>
 			<!-- Icons -->
-			<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="./icons/favicon-192x192.png"/>
-			<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="./icons/favicon-180x180.png"/>
-			<link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png"/>
-			<link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png"/>
+			<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="/icons/favicon-192x192.png"/>
+			<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/icons/favicon-180x180.png"/>
+			<link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png"/>
+			<link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png"/>
 			<link rel="manifest" href="site.webmanifest"/>
 			<!-- Icons -->
 			<link rel="stylesheet" type="text/css" href="styles.css"/>
@@ -100,7 +100,7 @@ templ Menu(name string) {
 						<div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
 							<div class="border-b border-amber-600">
 								<div class="flex h-16 items-center justify-between px-4 sm:px-0">
-									<img src="./images/logo-light.png" alt="Logo" width="50" height="50" class="brightness-125 contrast-200 saturate-200"/>
+									<img src="/images/logo-light.png" alt="Logo" width="50" height="50" class="brightness-125 contrast-200 saturate-200"/>
 								</div>
 							</div>
 						</div>
@@ -140,7 +140,7 @@ templ Menu(name string) {
 										{name: "Chicken Soup", price: 35},
 										{name: "Egg Chicken Soup", price: 40},
 									})
-									<img src="./images/tomato.png" alt="Tomato" width="200" height="200" class="absolute animate-move -left-28 -top-28"/>
+									<img src="/images/tomato.png" alt="Tomato" width="200" height="200" class="absolute animate-move -left-28 -top-28"/>
 								</div>
 								<div class="relative">
 									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Noodles</h2>
@@ -152,7 +152,7 @@ templ Menu(name string) {
 										{name: "Chicken Noodles", price: 45},
 										{name: "Egg Chicken Noodles", price: 50},
 									})
-									<img src="./images/noodle.png" alt="Noodles" width="225" height="200" class="absolute animate-move -right-28 -top-8"/>
+									<img src="/images/noodle.png" alt="Noodles" width="225" height="200" class="absolute animate-move -right-28 -top-8"/>
 								</div>
 								<div class="relative">
 									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Manchurian &amp; Rolls</h2>
@@ -165,7 +165,7 @@ templ Menu(name string) {
 										{name: "Egg Manchurian", price: 45},
 										{name: "Chicken Manchurian", price: 50},
 									})
-									<img src="./images/rolls.png" alt="Rolls" width="225" height="200" class="absolute animate-move -right-32 -top-16"/>
+									<img src="/images/rolls.png" alt="Rolls" width="225" height="200" class="absolute animate-move -right-32 -top-16"/>
 								</div>
 								<div class="relative">
 									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Main Course</h2>
@@ -187,7 +187,7 @@ templ Menu(name string) {
 										{name: "Plain Sabji", price: 35},
 										{name: "Alu Parwal Sabji", price: 30},
 									})
-									<img src="./images/chana-masala.png" alt="Chana Masala" width="200" height="200" class="absolute animate-move -right-28 -top-12"/>
+									<img src="/images/chana-masala.png" alt="Chana Masala" width="200" height="200" class="absolute animate-move -right-28 -top-12"/>
 								</div>
 								<div class="relative">
 									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Rice</h2>
@@ -202,7 +202,7 @@ templ Menu(name string) {
 										{name: "Chicken Biryani 🔥🔥🔥", price: 100},
 										{name: "Mutton Biryani", price: 150},
 									})
-									<img src="./images/chicken-biryani.png" alt="Chicken Biryani" width="200" height="200" class="absolute animate-move -right-28 -top-12"/>
+									<img src="/images/chicken-biryani.png" alt="Chicken Biryani" width="200" height="200" class="absolute animate-move -right-28 -top-12"/>
 								</div>
 								<div class="relative">
 									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Chicken</h2>
@@ -217,7 +217,7 @@ templ Menu(name string) {
 										{name: "Chicken Poda", price: 80},
 										{name: "Chicken Kadai", price: 100},
 									})
-									<img src="./images/tandoori-chicken.png" alt="Tandoori Chicken" width="200" height="200" class="absolute animate-move -right-28 -top-12"/>
+									<img src="/images/tandoori-chicken.png" alt="Tandoori Chicken" width="200" height="200" class="absolute animate-move -right-28 -top-12"/>
 								</div>
 								<div class="relative">
 									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Mutton</h2>
@@ -226,7 +226,7 @@ templ Menu(name string) {
 										{name: "Mutton Kassa", price: 120},
 										{name: "Mutton Alu Jholo", price: 130},
 									})
-									<img src="./images/rogan-josh.png" alt="Rogan Josh" width="200" height="200" class="absolute animate-move -right-28 -top-4"/>
+									<img src="/images/rogan-josh.png" alt="Rogan Josh" width="200" height="200" class="absolute animate-move -right-28 -top-4"/>
 								</div>
 								<div class="relative">
 									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Egg</h2>
@@ -240,7 +240,7 @@ templ Menu(name string) {
 										{name: "Egg Butter Masala", price: 60},
 										{name: "Egg Tadka", price: 50},
 									})
-									<img src="./images/omlette.png" alt="Omlette" width="200" height="200" class="absolute animate-move -right-28 -top-4"/>
+									<img src="/images/omlette.png" alt="Omlette" width="200" height="200" class="absolute animate-move -right-28 -top-4"/>
 								</div>
 								<div class="relative">
 									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Fish</h2>
@@ -251,7 +251,7 @@ templ Menu(name string) {
 										{name: "Fish Fry", price: 40},
 										{name: "Fish Chilly", price: 50},
 									})
-									<img src="./images/fish-curry.png" alt="Fish Curry" width="180" height="200" class="absolute animate-move -right-24 -top-12"/>
+									<img src="/images/fish-curry.png" alt="Fish Curry" width="180" height="200" class="absolute animate-move -right-24 -top-12"/>
 								</div>
 								<div class="relative">
 									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Thali</h2>
@@ -266,7 +266,7 @@ templ Menu(name string) {
 										{name: "Chicken Thali", price: 150},
 										{name: "Mutton Thali", price: 180},
 									})
-									<img src="./images/thali.png" alt="Thali" width="180" height="200" class="absolute animate-move -right-24 -top-12"/>
+									<img src="/images/thali.png" alt="Thali" width="180" height="200" class="absolute animate-move -right-24 -top-12"/>
 								</div>
 								<div class="relative">
 									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Meals</h2>
@@ -284,7 +284,7 @@ templ Menu(name string) {
 										{name: "Mix Bhaja", price: 40},
 										{name: "Mix Roasted Pampad", price: 10},
 									})
-									<img src="./images/rice.png" alt="Rice" width="200" height="200" class="absolute animate-move -right-28 -top-8"/>
+									<img src="/images/rice.png" alt="Rice" width="200" height="200" class="absolute animate-move -right-28 -top-8"/>
 								</div>
 								<div class="relative">
 									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Bread</h2>
@@ -295,7 +295,7 @@ templ Menu(name string) {
 										{name: "Oil Paratha", price: 10},
 										{name: "Butter Paratha", price: 15},
 									})
-									<img src="./images/naan.webp" alt="Naan" width="180" height="200" class="absolute animate-move -right-24 -top-8"/>
+									<img src="/images/naan.webp" alt="Naan" width="180" height="200" class="absolute animate-move -right-24 -top-8"/>
 								</div>
 								<div class="relative">
 									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Salads</h2>
@@ -305,7 +305,7 @@ templ Menu(name string) {
 										{name: "Green Salad", price: 50},
 										{name: "Tomato Salad", price: 50},
 									})
-									<img src="./images/salad-bowl.png" alt="Salad" width="225" height="200" class="absolute animate-move -right-32 -top-16"/>
+									<img src="/images/salad-bowl.png" alt="Salad" width="225" height="200" class="absolute animate-move -right-32 -top-16"/>
 								</div>
 								<div class="relative">
 									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Without Onion &amp; Garlic</h2>
@@ -315,7 +315,7 @@ templ Menu(name string) {
 										{name: "Dal Fry", price: 50},
 										{name: "Santula", price: 70},
 									})
-									<img src="./images/tadka.png" alt="Tadka" width="200" height="200" class="absolute animate-move -right-28 -top-12"/>
+									<img src="/images/tadka.png" alt="Tadka" width="200" height="200" class="absolute animate-move -right-28 -top-12"/>
 								</div>
 								<div class="relative">
 									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Add Ons</h2>
@@ -327,7 +327,7 @@ templ Menu(name string) {
 										{name: "Mineral Bottle", price: 20},
 										{name: "Gulab Jamun", price: 20},
 									})
-									<img src="./images/gulaab-jamun.png" alt="Gulaab Jamun" width="180" height="200" class="absolute animate-move -right-24 -top-4"/>
+									<img src="/images/gulaab-jamun.png" alt="Gulaab Jamun" width="180" height="200" class="absolute animate-move -right-24 -top-4"/>
 								</div>
 								<div class="relative">
 									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Special Notes</h2>
@@ -338,9 +338,9 @@ templ Menu(name string) {
 									</ul>
 									// https://stackoverflow.com/questions/65098910/how-can-i-animate-a-rectangle-with-a-sine-like-motion-and-rotation
 									<div class="absolute top-4 -right-36 -rotate-[40deg]">
-										<img src="./images/chef.png" alt="Chef" width="250" height="200" class="animate-wave"/>
+										<img src="/images/chef.png" alt="Chef" width="250" height="200" class="animate-wave"/>
 									</div>
-									<img src="./images/parsley.png" alt="Parsley" width="200" height="200" class="absolute animate-move -left-28 -bottom-44"/>
+									<img src="/images/parsley.png" alt="Parsley" width="200" height="200" class="absolute animate-move -left-28 -bottom-44"/>
 								</div>
 							</article>
 						</div>
@@ -350,7 +350,7 @@ templ Menu(name string) {
 								<div class="lava -one"></div>
 								<div class="lava -two"></div>
 							</div>
-							<img src="./images/cutting-board.png" alt="Cutting Board" width="200" height="200" class="absolute animate-move right-0 -top-10"/>
+							<img src="/images/cutting-board.png" alt="Cutting Board" width="200" height="200" class="absolute animate-move right-0 -top-10"/>
 							<div class="flex justify-center items-end h-full">
 								<div class="text-orange-900 animate-hover">
 									Made with
