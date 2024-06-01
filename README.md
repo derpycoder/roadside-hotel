@@ -12,7 +12,9 @@
 
 1. `air`
 1. `./tailwindcss -i ./templates/tailwind.css -o ./build/styles.css --watch --minify`
-1. `templ generate`
+1. `templ generate --proxy="http://localhost:5500/build" --watch --open-browser=false`
+
+or use Taskfile
 
 ## Tech Stack:
 
