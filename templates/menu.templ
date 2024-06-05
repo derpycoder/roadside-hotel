@@ -142,16 +142,22 @@ templ Menu() {
 									<img src="./images/tomato.png" alt="Tomato" width="200" height="200" class="absolute animate-move -left-28 -top-28"/>
 								</div>
 								<div class="relative">
+									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Starters</h2>
+									@sub_menu([]Dish{
+										{name: "Sweet Corn Dry", price: 220},
+										{name: "Green Peas Dry", price: 100},
+										{name: "Chickpeas Dry", price: 160},
+										{name: "Paneer Chilly", price: 180},
+										{name: "Mushroom Chilly", price: 180},
+									})
+									<img src="./images/chilly-paneer.png" alt="Chilly Paneer" width="200" height="200" class="absolute animate-move -right-28 -top-4"/>
+								</div>
+								<div class="relative">
 									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Noodles</h2>
 									@sub_menu([]Dish{
 										{name: "Veg Noodles", price: 60},
 										{name: "Paneer Noodles", price: 80},
 										{name: "Mushroom Noodles", price: 80},
-										{name: "Sweetcorn Dry Noodles", price: 220},
-										{name: "Green Peas Dry Noodles", price: 100},
-										{name: "Chickpeas Dry Noodles", price: 160},
-										{name: "Paneer Chilly Noodles", price: 180},
-										{name: "Mushroom Chilly Noodles", price: 180},
 										{name: "Mix Chowmein", price: 100},
 										{name: "Egg Chowmein", price: 90},
 										{name: "Chicken Chowmein", price: 100},
@@ -415,7 +421,7 @@ templ Menu() {
 								<p class="send !text-amber-100 animate-move-two text-[10px] sm:text-sm">Hey, can I order some...</p>
 								<p class="receive !text-orange-900 animate-float font-semibold text-[10px] sm:text-sm">Call us 🤙🏽 <a href="tel:9861113658" class="font-semibold">986-111-3658</a></p>
 							</div>
-							<img src="./images/customer-service.png" alt="Customer Service" width="200" height="200" class="absolute animate-hover left-0 bottom-[-45px] w-[120px] sm:w-[150px] sm:bottom-[-55px]"/>
+							<img src="./images/customer-service.png" alt="Customer Service" width="200" height="200" class="absolute animate-hover left-0 bottom-[-45px] w-[120px] sm:w-[150px] md:w-[200px] sm:bottom-[-55px]"/>
 							// https://codepen.io/chauhanswapnil/pen/eYvZqXy
 							<div class="lamp absolute bottom-0 pointer-events-none">
 								<div class="lava -one"></div>
