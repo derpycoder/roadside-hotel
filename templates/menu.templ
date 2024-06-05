@@ -174,22 +174,28 @@ templ Menu() {
 								<div class="relative">
 									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Main Course</h2>
 									@sub_menu([]Dish{
-										{name: "Dal Fry", price: 40},
-										{name: "Dal Makhani", price: 50},
-										{name: "Tadaka", price: 40},
-										{name: "Buttery Tadaka", price: 50},
-										{name: "Chana Masala", price: 40},
-										{name: "Mix Veg 🔥🔥🔥", price: 70},
-										{name: "Green Peas Masala", price: 60},
-										{name: "Mushroom Chilly", price: 90},
-										{name: "Mushroom Masala", price: 80},
-										{name: "Paneer Bharta", price: 90},
-										{name: "Paneer Butter Masala", price: 100},
-										{name: "Paneer Chilly", price: 90},
-										{name: "Paneer Masala", price: 80},
-										{name: "Matar Paneer Curry", price: 90},
+										{name: "Yellow Dal", price: 40},
 										{name: "Plain Sabji", price: 35},
 										{name: "Alu Parwal Sabji", price: 30},
+										{name: "Tadaka", price: 80},
+										{name: "Dal Tadaka", price: 100},
+										{name: "Chana Masala", price: 80},
+										{name: "Seasonal Curry", price: 60},
+										{name: "Mix Veg 🔥🔥🔥", price: 140},
+										{name: "Veg Kurma", price: 120},
+										{name: "Dal Fry", price: 40},
+										{name: "Dal Makhani", price: 50},
+										{name: "Buttery Tadaka", price: 50},
+										{name: "Green Peas Masala", price: 60},
+										{name: "Mushroom Chilly Gravy", price: 170},
+										{name: "Mushroom Masala", price: 180},
+										{name: "Paneer Gravy", price: 200},
+										{name: "Paneer Kurma", price: 200},
+										{name: "Paneer Bhurji", price: 160},
+										{name: "Paneer Butter Masala", price: 240},
+										{name: "Paneer Chilly", price: 90},
+										{name: "Paneer Masala", price: 180},
+										{name: "Matar Paneer Curry", price: 200},
 									})
 									<img src="./images/chana-masala.png" alt="Chana Masala" width="200" height="200" class="absolute animate-move -right-28 -top-12"/>
 								</div>
@@ -211,23 +217,25 @@ templ Menu() {
 								<div class="relative">
 									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Chicken</h2>
 									@sub_menu([]Dish{
-										{name: "Chicken Curry", price: 80},
-										{name: "Chicken Kassa 🌶️🌶️🌶️", price: 80},
+										{name: "Chicken Curry", price: 180},
+										{name: "Chicken Kassa 🌶️🌶️🌶️", price: 200},
+										{name: "Chicken Dry", price: 240},
+										{name: "Leg Piece Masala", price: 80},
 										{name: "Chicken Butter Masala", price: 100},
 										{name: "Chicken Fry Curry", price: 80},
 										{name: "Chicken Chilly", price: 80},
 										{name: "Chicken Masala", price: 80},
-										{name: "Chicken Mughlai", price: 100},
-										{name: "Chicken Poda", price: 80},
-										{name: "Chicken Kadai", price: 100},
+										{name: "Chicken Mughlai", price: 240},
+										{name: "Chicken Poda", price: 250},
+										{name: "Kadai Murgh", price: 260},
 									})
 									<img src="./images/tandoori-chicken.png" alt="Tandoori Chicken" width="200" height="200" class="absolute animate-move -right-28 -top-12"/>
 								</div>
 								<div class="relative">
 									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Mutton</h2>
 									@sub_menu([]Dish{
-										{name: "Mutton Curry", price: 100},
-										{name: "Mutton Kassa", price: 120},
+										{name: "Mutton Curry", price: 260},
+										{name: "Mutton Kassa", price: 240},
 										{name: "Mutton Alu Jholo", price: 130},
 									})
 									<img src="./images/rogan-josh.png" alt="Rogan Josh" width="200" height="200" class="absolute animate-move -right-28 -top-4"/>
@@ -235,13 +243,15 @@ templ Menu() {
 								<div class="relative">
 									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Egg</h2>
 									@sub_menu([]Dish{
-										{name: "Egg Poch", price: 30},
-										{name: "Egg Omelette", price: 30},
-										{name: "Egg Bhurji", price: 30},
-										{name: "Egg Bhurji Curry", price: 40},
-										{name: "Egg Curry", price: 30},
+										{name: "Egg Poch", price: 40},
+										{name: "Egg Omelette", price: 40},
+										{name: "Egg Bhurji", price: 40},
+										{name: "Egg Bhurji Curry", price: 50},
+										{name: "Egg Curry (2)", price: 40},
 										{name: "Egg Masala", price: 50},
 										{name: "Egg Butter Masala", price: 60},
+										{name: "Egg Chatuni", price: 40},
+										{name: "Egg Keema Fry", price: 60},
 										{name: "Egg Tadka", price: 50},
 									})
 									<img src="./images/omlette.png" alt="Omlette" width="200" height="200" class="absolute animate-move -right-28 -top-4"/>
@@ -249,11 +259,16 @@ templ Menu() {
 								<div class="relative">
 									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Fish</h2>
 									@sub_menu([]Dish{
-										{name: "Fish Masala", price: 50},
-										{name: "Fish Curry", price: 30},
-										{name: "Fish Besara", price: 40},
-										{name: "Fish Fry", price: 40},
+										{name: "Fish Curry", price: 40},
 										{name: "Fish Chilly", price: 50},
+										{name: "Fish Masala", price: 80},
+										{name: "Fish Fry", price: 50},
+										{name: "Fish Poi", price: 80},
+										{name: "Desi Fish", price: 70},
+										{name: "Fish Besara", price: 60},
+										{name: "Desi Fish Besara (2)", price: 80},
+										{name: "Fish Chinchida", price: 80},
+										{name: "Fish Munda Chinchida", price: 100},
 									})
 									<img src="./images/fish-curry.png" alt="Fish Curry" width="180" height="200" class="absolute animate-move -right-24 -top-12"/>
 								</div>
@@ -261,30 +276,47 @@ templ Menu() {
 									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Thali</h2>
 									@sub_menu([]Dish{
 										{name: "Odia Veg Thali", price: 80},
-										{name: "Paneer Thali", price: 150},
-										{name: "Mushroom Thali", price: 150},
-										{name: "Mix Veg Thali", price: 140},
-										{name: "Special Veg Thali", price: 190},
-										{name: "Egg Thali", price: 90},
-										{name: "Fish Thali", price: 100},
-										{name: "Chicken Thali", price: 150},
-										{name: "Mutton Thali", price: 180},
+										{name: "Pakhal Thali", price: 120},
+										{name: "Dahi Pakhal Thali", price: 120},
+										{name: "Paneer Thali", price: 240},
+										{name: "Mushroom Thali", price: 240},
+										{name: "Without Onion/Garlic Thali", price: 200},
+										{name: "Mix Veg Thali", price: 220},
+										{name: "Special Veg Thali", price: 250},
+										{name: "Egg Curry Thali", price: 100},
+										{name: "Fish Besara Thali", price: 100},
+										{name: "Pohola Fish Thali", price: 160},
+										{name: "Fish Chinchida Thali", price: 130},
+										{name: "Chicken Thali", price: 160},
+										{name: "Desi Chicken Thali", price: 220},
+										{name: "Mutton Thali", price: 170},
 									})
 									<img src="./images/thali.png" alt="Thali" width="180" height="200" class="absolute animate-move -right-24 -top-12"/>
 								</div>
 								<div class="relative">
 									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Meals</h2>
 									@sub_menu([]Dish{
-										{name: "Rice", price: 20},
-										{name: "Dal", price: 30},
-										{name: "Bhaja", price: 30},
+										{name: "Usuna Rice", price: 30},
+										{name: "Dal / Dalma", price: 40},
 										{name: "Saga", price: 30},
+										{name: "Bhaja", price: 30},
 										{name: "Chips", price: 20},
 										{name: "Bharta", price: 30},
+										{name: "Tomato Khata", price: 30},
 										{name: "Dahi Ambila Khata", price: 30},
+										{name: "Triangular Chips", price: 30},
 										{name: "Kalera Chips", price: 30},
+										{name: "Pampad", price: 20},
+										{name: "Banana Chips", price: 30},
+										{name: "Janhi Posto", price: 30},
+										{name: "Roasted Tomato", price: 30},
+										{name: "Badi Chura", price: 30},
+										{name: "Ghanta Tarkari", price: 30},
 										{name: "Seasonal Curry", price: 30},
+										{name: "Aloo Gobi Curry", price: 30},
+										{name: "Aloo Potol Curry", price: 30},
 										{name: "Aloo Zeera Bhaja", price: 30},
+										{name: "Aloo Chokha", price: 30},
 										{name: "Mix Bhaja", price: 40},
 										{name: "Mix Roasted Pampad", price: 10},
 									})
@@ -293,21 +325,35 @@ templ Menu() {
 								<div class="relative">
 									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Bread</h2>
 									@sub_menu([]Dish{
-										{name: "Roti", price: 05},
+										{name: "Puri", price: 10},
+										{name: "Tawa Roti", price: 05},
 										{name: "Butter Roti", price: 10},
-										{name: "Ghee Roti", price: 10},
-										{name: "Oil Paratha", price: 10},
-										{name: "Butter Paratha", price: 15},
+										{name: "Ghee Roti", price: 15},
+										{name: "Plain Paratha", price: 10},
+										{name: "Oil Paratha", price: 15},
+										{name: "Ghee Paratha", price: 20},
+										{name: "Bread Toast", price: 10},
+										{name: "Tandoor Roti", price: 20},
+										{name: "Naan", price: 20},
+										{name: "Garlic Naan", price: 40},
+										{name: "Butter Naan", price: 40},
+										{name: "Kulcha", price: 40},
+										{name: "Masala Kulcha", price: 40},
+										{name: "Laccha Paratha", price: 40},
 									})
 									<img src="./images/naan.webp" alt="Naan" width="180" height="200" class="absolute animate-move -right-24 -top-8"/>
 								</div>
 								<div class="relative">
 									<h2 class="font-lobster shadow-lg backdrop-filter backdrop-blur-sm text-3xl bg-orange-400 text-orange-900 rounded-md font-semibold inline-block px-2">Salads</h2>
 									@sub_menu([]Dish{
-										{name: "Cucumber Salad", price: 40},
 										{name: "Onion Salad", price: 30},
-										{name: "Green Salad", price: 50},
-										{name: "Tomato Salad", price: 50},
+										{name: "Tomato Salad", price: 40},
+										{name: "Cucumber Salad", price: 40},
+										{name: "Green Salad", price: 40},
+										{name: "Fruit Salad", price: 50},
+										{name: "Watermelon Salad", price: 60},
+										{name: "Carrot Salad", price: 40},
+										{name: "Tomato & Onion Salad", price: 60},
 									})
 									<img src="./images/salad-bowl.png" alt="Salad" width="225" height="200" class="absolute animate-move -right-32 -top-16"/>
 								</div>
@@ -327,8 +373,17 @@ templ Menu() {
 										{name: "Masala Papad", price: 30},
 										{name: "Raita", price: 10},
 										{name: "Dahi", price: 30},
-										{name: "Masala Cold Drinks", price: 30},
-										{name: "Mineral Bottle", price: 20},
+										{name: "Mishti Dahi", price: 40},
+										{name: "Probiotic Dahi", price: 50},
+										{name: "Hot Milk", price: 50},
+										{name: "Badam Milk", price: 60},
+										{name: "Chocolate Syrup", price: 30},
+										{name: "Mineral Water Bottle", price: 20},
+										{name: "Pickle Pouch", price: 10},
+										{name: "Masala Cold Drinks", price: 40},
+										{name: "Lassi", price: 30},
+										{name: "Ice Cream", price: 30},
+										{name: "Sodas", price: 20},
 										{name: "Gulab Jamun", price: 20},
 									})
 									<img src="./images/gulaab-jamun.png" alt="Gulaab Jamun" width="180" height="200" class="absolute animate-move -right-24 -top-4"/>
@@ -349,13 +404,19 @@ templ Menu() {
 							</article>
 						</div>
 						<footer class="relative overflow-hidden h-[300px]">
+							// https://codepen.io/samuelkraft/pen/kYrjwX
+							<div class="flex flex-col w-1/3 ml-44 mt-10">
+								<p class="send !text-amber-100 animate-move-two">Hey, can I order some...</p>
+								<p class="receive !text-orange-900 animate-float font-semibold">Call us 🤙🏽 <a href="tel:9861113658" class="font-semibold">986-111-3658</a></p>
+							</div>
+							<img src="./images/customer-service.png" alt="Customer Service" width="200" height="200" class="absolute animate-hover left-0 bottom-[-55px]"/>
 							// https://codepen.io/chauhanswapnil/pen/eYvZqXy
-							<div class="lamp absolute bottom-0">
+							<div class="lamp absolute bottom-0 pointer-events-none">
 								<div class="lava -one"></div>
 								<div class="lava -two"></div>
 							</div>
 							<img src="./images/cutting-board.png" alt="Cutting Board" width="200" height="200" class="absolute animate-move right-0 -top-10"/>
-							<div class="flex justify-center items-end h-full">
+							<div class="flex justify-center items-center h-[175px]">
 								<div class="text-orange-900 animate-hover">
 									Made with
 									<svg class="inline-block" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" viewBox="0 0 24 24">

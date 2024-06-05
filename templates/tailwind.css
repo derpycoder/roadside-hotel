@@ -8,6 +8,71 @@
   }
 }
 
+:root {
+  --send-bg: #9a3412;
+  --send-color: white;
+  --receive-bg: #fcd38a;
+  --receive-text: black;
+  --page-background: #fdefbd;
+}
+
+/* iOS Chat Bubble */
+p {
+  max-width: 255px;
+  word-wrap: break-word;
+  margin-bottom: 12px;
+  line-height: 24px;
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 25px;
+}
+
+p:before,
+p:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 25px;
+}
+
+.send {
+  color: var(--send-color);
+  background: var(--send-bg);
+  align-self: flex-end;
+}
+
+.send:before {
+  right: -7px;
+  width: 20px;
+  background-color: var(--send-bg);
+  border-bottom-left-radius: 16px 14px;
+}
+
+.send:after {
+  right: -26px;
+  width: 26px;
+  background-color: var(--page-background);
+  border-bottom-left-radius: 10px;
+}
+.receive {
+  background: var(--receive-bg);
+  color: black;
+  align-self: flex-start;
+}
+.receive:before {
+  left: -7px;
+  width: 20px;
+  background-color: var(--receive-bg);
+  border-bottom-right-radius: 16px 14px;
+}
+.receive:after {
+  left: -26px;
+  width: 26px;
+  background-color: var(--page-background);
+  border-bottom-right-radius: 10px;
+}
+/* iOS Chat Bubble*/
+
 img {
   filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.04))
     drop-shadow(0 4px 3px rgba(0, 0, 0, 0.4));
@@ -345,6 +410,66 @@ Not supports in Firefox and IE */
 
 .animate-hover {
   animation: hover 3s ease 0s infinite alternate none;
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease 0s infinite alternate none;
+}
+
+@keyframes dz {
+  0% {
+    transform: translate(0);
+  }
+
+  25% {
+    transform: translate(-15px);
+  }
+
+  50% {
+    transform: translate(-8px);
+  }
+
+  75% {
+    transform: translate(-15px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+.animate-dz {
+  animation: dz 3s infinite !important;
+}
+
+@keyframes move-two {
+  0% {
+    transform: rotate(1deg) translate(2px, 2px);
+  }
+
+  50% {
+    transform: rotate(-1deg) translate(-2px, -2px);
+  }
+
+  100% {
+    transform: rotate(1deg) translate(2px, 2px);
+  }
+}
+
+.animate-move-two {
+  animation: move-two 3s infinite !important;
 }
 
 /* Animations */
