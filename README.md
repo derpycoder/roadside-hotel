@@ -6,7 +6,7 @@
 
 ## QR Code
 
-![Scan Me - QR Code](https://github.com/derpycoder/roadside-hotel/assets/25662120/1a7c48d1-795a-49af-9c14-84881e7ed243)
+![QR Code Roadside Hotel](https://github.com/derpycoder/roadside-hotel/assets/25662120/f38e24b3-9694-4092-bf87-e7e35e6c5f66)
 
 
 ## Screenshots
